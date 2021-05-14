@@ -1,5 +1,5 @@
 import './App.css';
-import Characters from './container/Characters'
+import Characters from './views/Characters'
 import { connect } from 'react-redux'
 
 
