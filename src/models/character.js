@@ -7,6 +7,21 @@ export const tableStatusCodes = {
 }
 export const nameModel = 'character';
 
+export const filterCharacterByAnyAttribute = (characters, attributes) => {
+    let {name, status, species, type, gender, location} = attributes;
+    let data = characters.filter(row=>{
+        return (
+            (name    ? row.name.toLowerCase().trim().includes(name.toLowerCase().trim())         : false) ||
+            (status  ? row.status.toLowerCase().trim().includes(status.toLowerCase().trim())     : false) ||
+            (species ? row.species.toLowerCase().trim().includes(species.toLowerCase().trim())   : false) ||
+            //(type    ? row.type.toLowerCase().trim().includes(type.toLowerCase().trim())         : false) ||
+            (gender  ? row.gender.toLowerCase().trim().includes(gender.toLowerCase().trim())     : false) ||
+            (location ? row.location.name.toLowerCase().trim().includes(location.toLowerCase().trim())     : false)   
+        );
+    });
+    return data;
+};
+
 export default {
     state: {
         list: [],
