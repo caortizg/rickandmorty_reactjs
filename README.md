@@ -2,9 +2,12 @@
 
 Desarrollar una aplicación ReactJs que consulte la api de https://rickandmortyapi.com/
 
-## Clonar el repositorio
+## Clonar el repositorio e iniciar
 ```shell
 git clone https://github.com/caortizg/rickandmorty_reactjs.git
+cd rickandmorty_reactjs
+npm install
+npm start
 ```
 ## Scripts disponibles
 
