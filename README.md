@@ -15,3 +15,7 @@ npm start
 
 Iniciar la aplicación\
 Abra [http://localhost:3000](http://localhost:3000) para verlo en el navegador.
+
+
+## Desarrollado por
+Carlos Andres Ortiz G.
