@@ -9,6 +9,7 @@ import bgImages, {dots5} from '../backgroundImage';
 import toolsArray from '../tools/array';
 import {PaginationCharacter,PaginationListCharacter} from '../components/Pagination';
 import {FilterCharacter} from '../components/Filter';
+import {CircularProgressCharacter} from '../components/Progress';
 import Footer from "../components/Footer/Footer";
 import Header from "../components/Header/Header";
 
@@ -97,7 +98,11 @@ function Characters(props) {
                         </Grid>
                     </Grid>
                     <FilterCharacter onChange={handleChangeSearch} value={search} onSearch={filterCharacters} />
-                    <PaginationListCharacter list={charactersPage} filters={[filters]}/>
+                    {
+                        charactersPage.length ? 
+                        <PaginationListCharacter list={charactersPage} filters={[filters]}/> :
+                        <CircularProgressCharacter />
+                    }
                     <PaginationCharacter pages={pages} page={page} onChange={handleChangePage} />
                 </Grid>
             </div>
